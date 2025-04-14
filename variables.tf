@@ -6,7 +6,7 @@ variable "instance_type" {
 variable "ami_filter" {
   description = "Name filter and owner of AMI"
 
-  type    = objecct ({
+  type    = object ({
     name  = string
     owner = string
   })
@@ -23,9 +23,10 @@ variable "environment" {
     name      = string
     network_prefix = string
   })
-  name           = "dev"
-  network_prefix = "10.0"
-
+  default = {
+    name           = "dev"
+    network_prefix = "10.0"
+  }
 }
 
 
