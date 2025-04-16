@@ -2,7 +2,7 @@ module "qa" {
     source = "../modules/blog"
 
 
-environment "qa" = {
+environment = {
     name           = "qa"
     network_prefix = "10.1"
 }
